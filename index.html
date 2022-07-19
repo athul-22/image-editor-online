@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>IMAGE EDITOR</title>
+        
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    </head>
+    <body>
+
+        <div class="container" id="containerbg">
+            <h1>Image Editor</h1>
+            
+            <button  onclick="darkMode()" class="dark-mode" id="light-mode-id"><i  id="sun-moon" class="fa-solid fa-moon"></i></button>
+            <button style="visibility:hidden;" onclick="lightMode()" class="dark-mode" id="dark-mode-id"><i id="sun-moon" class="fa-solid fa-sun"></i></button>
+                <div class="wrapper">
+
+                    <div class="editor">
+                        <div class="title">
+                            <label>Filter</label>
+                            <div class="options">
+                                <button class="active">Brightness</button>
+                                <button>Saturation</button>
+                                <button>Inversion</button>
+                                <button>Greayscale</button>
+                            </div>
+                            <div class="slider">
+                                <div class="filter-option">
+                                    <p class="name" style="float: left;">Brightness</p>
+                                    <p class="value" style="float: right;">100%</p>
+                                </div>
+                                <input type="range" value="100" min="0" max="100">
+                            </div>
+                        </div>
+
+                        <div class="rotate">
+                            <label>Rotaing and Flip</label>
+                            <div class="options">
+                                <button class="btn-icon"><i class="fa-solid fa-rotate-left"></i></button>
+                                <button class="btn-icon"><i class="fa-solid fa-rotate-right"></i></button>
+                                <button class="btn-icon"><i class="bx bx-reflect-vertical"></i></button>
+                                <button class="btn-icon"><i class="bx bx-reflect-horizontal"></i></button>
+                            </div>
+                            <div class="slider">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="preview">
+                    <img id="image" src="image-placeholder.jpg" alt="" style="float: right;">
+                </div>
+                </div>
+                <div class="controls">
+                    <button onclick=" resetimg()" class="reset-filer">Reset Filter</button>
+                    <div class="row">
+                        <input type="file" class="file-input" accept="image/*" hidden>
+                        <button class="choose-image">Choose Image</button>
+                        <button class="save-image">Save Image</button>
+                    </div>   
+                </div>
+        </div>
+
+
+
+        <script src="script.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!-- jquery -->
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <!-- toastr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+
+        
+    </body>
+</html>
